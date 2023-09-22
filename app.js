@@ -7,11 +7,11 @@ const textArea=document.getElementById("textArea");
 const input=document.getElementById("textinput");
 
 let inputdata=""
-showmorebtn.disabled=true;
+// showmorebtn.disabled=true;
 let page=1;
 function searchImage(){
     inputdata=input.value;
-    console.log(inputdata);
+    // console.log(inputdata);
     const link=`https://api.unsplash.com/search/photos?page=${page}&query=${inputdata}&client_id=${accessKey}`
 
     fetch(`${link}`)
@@ -19,7 +19,7 @@ function searchImage(){
     .then((data)=>{
         
         const results=data.results
-        console.log(results);
+        // console.log(results);
         if(page===1){
             searchResults.innerHTML="";
         }
@@ -61,5 +61,11 @@ searchbtn.addEventListener('click',function(e){
 
 })
 showmorebtn.addEventListener('click',function(e){
-    searchImage();
+    if(page==1){
+
+        showmorebtn.disabled=true;
+    }
+    else{
+        searchImage();
+    }
 })
