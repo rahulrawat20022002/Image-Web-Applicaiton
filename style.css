@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #212121;
+    background-color: #C0C1F9;
 }
 
   
@@ -68,6 +68,8 @@ html, body {
     height: 280px;
     /* color: #fff; */
     margin: 7px 7.5px;
+    border-radius: 25px;
+
     /* overflow: hidden; */
 }
 .images a{
@@ -79,6 +81,7 @@ html, body {
 .images{
     text-align: center;
     width: 30vw;
+    border-radius: 25px;
 }
 
 
@@ -86,6 +89,8 @@ html, body {
     text-align: center;
     /* background-color: red; */
     transform: translateY(25px);
+    cursor: pointer;
+    
     /* margin-top: 5vw; */
 }
 #showmorebtn button{
@@ -95,5 +100,6 @@ html, body {
     border: 1px solid black;
     color: #fff;
     font-size:1.2vw;
+    cursor: pointer;
     /* transform: translateY(-10px); */
 }
